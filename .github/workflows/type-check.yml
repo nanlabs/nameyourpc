@@ -36,4 +36,4 @@ jobs:
         run: pnpm install
 
       - name: Run type-check validation
-        run: pnpm run type-check --if-present
+        run: pnpm run type-check
