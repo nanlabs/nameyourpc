@@ -7,7 +7,7 @@ on:
   # call this workflow when the workflow Main Validation is completed after a push to main
   workflow_run:
     workflows:
-      - 'Continuous Integration'
+      - 'Lint Code Base'
     branches:
       - main
     types:
