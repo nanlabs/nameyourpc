@@ -1,6 +1,8 @@
-# nameyourpc Frontend
+# NaNLABS PC Name Generator!
 
-This project was generated using [create-awesome-node-app](https://www.npmjs.com/package/create-awesome-node-app). **DON'T USE THIS TEMPLATE AS IT!** Generate yours using the command and following the options in the interactive menu. Check the docs for more information!
+> This project was generated using [create-awesome-node-app](https://www.npmjs.com/package/create-awesome-node-app). **DON'T USE THIS TEMPLATE AS IT!** Generate yours using the command and following the options in the interactive menu. Check the docs for more information!
+
+Did you know that giving your computer a unique name not only adds a personal touch but also enhances the bond between you and your trusty machine? It's a tradition that celebrates the geeky culture we all love, and we're excited to be a part of it 🤓
 
 ## Features
 
@@ -8,13 +10,7 @@ This project was generated using [create-awesome-node-app](https://www.npmjs.com
 - ⚛ React - [React](https://reactjs.org/) is used for UI
 - 🦾 [TypeScript](https://www.typescriptlang.org/) - type safe
 
-## Extra documentation
-
-You can find useful information such as project structure, available scripts and much more in the [docs](./docs) folder!
-
-## Pre-packed
-
-### Dev tools
+## Pre-packed Dev tools
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [eslint](https://eslint.org/) - Linting utility for JavaScript and JSX
@@ -49,6 +45,10 @@ Available scripts:
 | ------------------ | --------------------------------------------------------------------- |
 | `preview`          | Serves your app using your production ready setup (`.env.production`) |
 | `build`            | Builds the application to `dist/`                                     |
+
+## Extra documentation
+
+You can find useful information such as project structure, available scripts and much more in the [docs](./docs) folder!
 
 ## Contributing
 
