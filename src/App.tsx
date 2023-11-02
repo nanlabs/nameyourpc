@@ -1,9 +1,14 @@
 import React, { Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const App = () => (
-  <Suspense fallback={<div>Loading...</div>}>
-    <div>App</div>
-  </Suspense>
-);
+const App = () => {
+  const { t } = useTranslation('translations');
+
+  return (
+    <Suspense fallback={<div>{t('loading')}</div>}>
+      <div>{t('title')}</div>
+    </Suspense>
+  );
+};
 
 export default App;
