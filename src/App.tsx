@@ -14,29 +14,27 @@ const App = () => {
           alt=""
         />
         <section className="text-white text-center text-6xl font-semibold leading-70 bg-clip-text bg-gradient self-center w-1084 max-w-1060 mt-24 max-md:max-w-full max-md:text-4xl max-md:leading-52 max-md:mt-10">
-          <span className="text-white">Today is </span>Name Your PC Day{" "}
+          <span className="text-white">Today is </span>Name Your PC Day{' '}
           <span className="text-white">
-            <br /> and we're here to make it memorable{" "}
+            <br /> and we&apos;re here to make it memorable{' '}
           </span>
         </section>
         <section className="text-white text-center text-xl font-bold leading-8 self-center max-w-846 mt-11 max-md:max-w-full max-md:mt-10">
           <span className="">
-            Did you know that giving your computer a unique name not only adds a
-            personal touch but also enhances the bond between you and your trusty
-            machine? It's a tradition that celebrates the geeky culture we all
-            love, and{" "}
+            Did you know that giving your computer a unique name not only adds a personal touch but also enhances the
+            bond between you and your trusty machine? It&apos;s a tradition that celebrates the geeky culture we all
+            love, and{' '}
           </span>
-          <span className="font-bold">we're excited to be a part of it</span>
+          <span className="font-bold">we&apos;re excited to be a part of it</span>
         </section>
         <section className="bg-white self-center flex w-full max-w-1071 flex-col items-center mt-20 px-20 py-16 rounded-3xl max-md:max-w-full max-md:mt-10 max-md:px-5">
           <div className="text-neutral-600 text-center text-xl leading-8 max-w-897 max-md:max-w-full">
-            We've got a fun way to help you name your PC. Answer these three
-            quirky questions, and we'll suggest the perfect name for your
-            computer. It's easy, entertaining, and the best part? It's all about
-            embracing your inner geek
+            We&apos;ve got a fun way to help you name your PC. Answer these three quirky questions, and we&apos;ll
+            suggest the perfect name for your computer. It&apos;s easy, entertaining, and the best part? It&apos;s all
+            about embracing your inner geek
           </div>
           <div className="text-white text-xl whitespace-nowrap items-center bg-gradient w-236 max-w-full mt-14 px-5 py-4 rounded-36 max-md:mt-10">
-            <a href="#">Let’s name your PC</a>
+            <a href="#">Let&apos;s name your PC</a>
           </div>
         </section>
         <img
@@ -52,8 +50,7 @@ const App = () => {
                 Plus, want to stay updated with our tech-tastic world? <br />
               </span>
               <span className="">
-                Subscribe to our newsletter for the latest in software development,
-                tech trends, and more.
+                Subscribe to our newsletter for the latest in software development, tech trends, and more.
               </span>
             </div>
             <div className="text-neutral-400 text-xl leading-8 whitespace-nowrap bg-white grow items-center p-5 rounded-l-full self-start">
