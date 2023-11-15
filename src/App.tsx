@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <Suspense fallback={<div>{t('loading')}</div>}>
-      <main className="bg-gradient flex flex-col">
+      <main className="pl-80 pr-80 bg-gradient flex flex-col bg-gray-900">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c35fd16-a08f-49b4-a03a-1f8371048079?apiKey=b59bae8eb0674da5802edba30bd21eb8&"
