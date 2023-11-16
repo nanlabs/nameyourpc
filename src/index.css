@@ -1,8 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+@layer base {
+  html {
+    font-family: "Open Sans", system-ui, sans-serif;
+  }
+}
+
+
 .gradient {
+  background: linear-gradient(72.43deg, #2943DE 16.09%, #5D73F5 82.08%, #687DFE 108.77%);
+}
+
+.btn-primary-gradient {
+  background: linear-gradient(90deg, #6F64F5 0%, #CE49CF 74.73%, #F46F66 121.6%);
+}
+
+.btn-option-gradient {
   background: linear-gradient(72.43deg, #2943DE 16.09%, #5D73F5 82.08%, #687DFE 108.77%);
 }

@@ -1,6 +1,27 @@
 import React, { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 
+const buttonVariants = {
+  base: 'px-8 py-3 rounded-3xl text-lg',
+  primary: 'btn-primary-gradient text-white',
+  option: 'btn-option-gradient text-white',
+};
+
+type ButtonProps = {
+  children: React.ReactNode;
+  onClick: () => void;
+  variant?: keyof typeof buttonVariants;
+};
+
+const Button: React.FC<ButtonProps> = ({ children, onClick, variant = 'primary' }) => {
+  console.log('variant', variant, buttonVariants[variant]);
+  return (
+    <button className={`${buttonVariants.base} ${buttonVariants[variant]}`} onClick={onClick}>
+      {children}
+    </button>
+  );
+};
+
 const App = () => {
   const { t } = useTranslation('translations');
 
@@ -14,28 +35,44 @@ const App = () => {
             className="aspect-ratio object-contain object-center w-164 justify-center items-center overflow-hidden self-center max-w-full mt-24 max-md:mt-10"
             alt=""
           />
-          <h1 className="text-white text-center text-6xl font-semibold leading-70 bg-clip-text bg-gradient self-center w-1084 max-w-1060 mt-24 max-md:max-w-full max-md:text-4xl max-md:leading-52 max-md:mt-10">
+          <h1 className="text-white text-center text-6xl font-semibold leading-tight bg-clip-text bg-gradient self-center w-1084 max-w-1060 mt-24 max-md:max-w-full max-md:text-4xl max-md:mt-10">
             Today is{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-200 to-sky-400">
               Name Your PC Day
             </span>
             <br /> and we&apos;re here to make it memorable{' '}
           </h1>
-          <section className="text-white text-center text-xl font-bold leading-8 self-center max-w-846 mt-11 max-md:max-w-full max-md:mt-10">
-            <span className="">
+          <section className="self-center max-w-846 mt-11 max-md:max-w-full max-md:mt-10 xl:px-32 lg:px-8 sm:px-2">
+            <p className="text-white text-center text-xl font-thin leading-normal">
               Did you know that giving your computer a unique name not only adds a personal touch but also enhances the
               bond between you and your trusty machine? It&apos;s a tradition that celebrates the geeky culture we all
-              love, and{' '}
-            </span>
-            <span className="font-bold">we&apos;re excited to be a part of it</span>
+              love, and <span className="font-bold">we&apos;re excited to be a part of it</span>
+            </p>
           </section>
-          <section className="bg-white self-center flex w-full max-w-1071 flex-col items-center mt-20 px-20 py-16 rounded-3xl max-md:max-w-full max-md:mt-10 max-md:px-5">
-            <div className="text-neutral-600 text-center text-xl leading-8 max-w-897 max-md:max-w-full">
-              We&apos;ve got a fun way to help you name your PC. Answer these three quirky questions, and we&apos;ll
-              suggest the perfect name for your computer. It&apos;s easy, entertaining, and the best part? It&apos;s all
-              about embracing your inner geek
-              <button className="px-8 py-2 rounded-3xl bg-blue-700 text-white">hola como andas</button>
+          <section className="bg-white container flex flex-col mt-20 px-20 py-16 rounded-3xl max-md:max-w-full max-md:mt-10 max-md:px-5">
+            <div className="container flex flex-col pb-10">
+              <h4 className="text-3xl font-bold text-neutral-600 text-center leading-8 max-md:max-w-full">
+                If your PC were a person, what would it look like?
+              </h4>
             </div>
+            <div className="container flex flex-row justify-around px-16">
+              <Button variant="option" onClick={console.log}>
+                Petite and elegant 👛
+              </Button>
+              <Button variant="option" onClick={console.log}>
+                Robust and sturdy 💪
+              </Button>
+              <Button variant="option" onClick={console.log}>
+                Tall and slender 📏
+              </Button>
+            </div>
+
+            <div className="container flex flex-row justify-around px-16 mt-10">
+              <Button variant="primary" onClick={console.log}>
+                Let’s name yout PC
+              </Button>
+            </div>
+
             <div className="text-white text-xl whitespace-nowrap items-center bg-gradient w-236 max-w-full mt-14 px-5 py-4 rounded-36 max-md:mt-10">
               <a href="#">Let&apos;s name your PC</a>
             </div>
