@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import Survey from '@/components/Survey';
 import landing from './landing.svg';
