@@ -3,22 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   html {
-    font-family: "Open Sans", system-ui, sans-serif;
+    font-family: 'Open Sans', system-ui, sans-serif;
   }
 }
 
-
 .gradient {
-  background: linear-gradient(72.43deg, #2943DE 16.09%, #5D73F5 82.08%, #687DFE 108.77%);
+  background: linear-gradient(72.43deg, #2943de 16.09%, #5d73f5 82.08%, #687dfe 108.77%);
 }
 
 .btn-primary-gradient {
-  background: linear-gradient(90deg, #6F64F5 0%, #CE49CF 74.73%, #F46F66 121.6%);
+  background: linear-gradient(90deg, #6f64f5 0%, #ce49cf 74.73%, #f46f66 121.6%);
 }
 
 .btn-option-gradient {
-  background: linear-gradient(72.43deg, #2943DE 16.09%, #5D73F5 82.08%, #687DFE 108.77%);
+  background: linear-gradient(72.43deg, #2943de 16.09%, #5d73f5 82.08%, #687dfe 108.77%);
 }
