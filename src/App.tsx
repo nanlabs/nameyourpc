@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import Survey from '@/components/Survey';
+import landing from './landing.svg';
 
 const App = () => {
   const { t } = useTranslation('translations');
@@ -8,7 +9,10 @@ const App = () => {
   return (
     <Suspense fallback={<div>{t('loading')}</div>}>
       <main className="flex flex-col gradient">
-        <div className="lg:container mx-auto flex flex-col px-4 md:px-20 2xl:px-40">
+        <div className="absolute top-0 right-0 left-0 bottom-0 z-0 overflow-hidden mix-blend-lighten sm:mix-blend-normal">
+          <img loading="lazy" src={landing} className="aspect-ratio object-fill object-center overflow-hidden w-full" />
+        </div>
+        <div className="relative lg:container mx-auto flex flex-col px-4 md:px-20 2xl:px-40 bg-transparent z-10">
           <a
             className="justify-center items-center overflow-hidden self-center max-w-full mt-24 max-md:mt-10"
             href="https://nan-labs.com"
@@ -21,10 +25,7 @@ const App = () => {
             />
           </a>
           <h1 className="text-white text-center text-6xl font-semibold leading-tight bg-clip-text bg-gradient self-center w-1084 max-w-1060 mt-24 max-md:max-w-full max-md:text-4xl max-md:mt-10">
-            Today is{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-200 to-sky-400">
-              Name Your PC Day
-            </span>
+            Today is <span className="text-gradient">Name Your PC Day</span>
             <br /> and we&apos;re here to make it memorable{' '}
           </h1>
           <section className="self-center max-w-846 mt-11 max-md:max-w-full max-md:mt-10 xl:px-32 lg:px-8 sm:px-2">
@@ -39,7 +40,7 @@ const App = () => {
           </section>
         </div>
 
-        <section className="bg-neutral-700 flex w-full flex-col items-center mt-20 pt-20 pb-24 px-5 max-md:mt-10">
+        <section className="relative bg-neutral-700 flex w-full flex-col items-center mt-20 pt-20 pb-24 px-5 max-md:mt-10">
           <div className="lg:container mx-auto flex flex-col px-4 lg:flex-row justify-between md:px-20 2xl:px-40">
             <div className="text-white text-xl leading-relaxed grow shrink basis-auto md:max-w-xl">
               <p className="font-bold">Plus, want to stay updated with our tech-tastic world?</p>
