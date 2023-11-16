@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import landing from './landing.png';
+import landing from './landing.svg';
 import Button from '@/components/Button';
 
 const App = () => {
