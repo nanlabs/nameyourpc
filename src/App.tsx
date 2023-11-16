@@ -34,13 +34,13 @@ const App = () => {
               love, and <span className="font-bold">we&apos;re excited to be a part of it</span>
             </p>
           </section>
-          <section className="bg-white container flex flex-col mt-20 px-20 py-16 rounded-3xl max-md:max-w-full max-md:mt-10 max-md:px-5">
-            <div className="container flex flex-col pb-10">
-              <h4 className="text-3xl font-semibold text-neutral-600 text-center leading-8 max-md:max-w-full">
+          <section className="bg-white container flex flex-col mt-20 px-20 py-16 rounded-3xl max-w-full max-md:mt-10 max-md:px-5">
+            <div className="flex flex-col pb-10">
+              <h4 className="text-3xl font-semibold text-neutral-600 text-center leading-8 max-w-full">
                 If your PC were a person, what would it look like?
               </h4>
             </div>
-            <div className="container flex flex-row justify-around px-16">
+            <div className="flex flex-row justify-around flex-wrap px-16 gap-4 lg:gap-2 xl:gap-0">
               <Button variant="option" onClick={console.log}>
                 Petite and elegant 👛
               </Button>
@@ -52,22 +52,12 @@ const App = () => {
               </Button>
             </div>
 
-            <div className="container flex flex-row justify-around px-16 mt-10">
+            <div className="flex flex-row justify-around px-16 mt-10">
               <Button variant="primary" onClick={console.log}>
                 Let’s name yout PC
               </Button>
             </div>
-
-            <div className="text-white text-xl whitespace-nowrap items-center bg-gradient w-236 max-w-full mt-14 px-5 py-4 rounded-36 max-md:mt-10">
-              <a href="#">Let&apos;s name your PC</a>
-            </div>
           </section>
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f4d083e-5c86-4f7b-96ac-55562af165f6?apiKey=b59bae8eb0674da5802edba30bd21eb8&"
-            className="aspect-ratio object-contain object-center w-195 overflow-hidden self-center max-w-full mt-24 max-md:mt-10"
-            alt=""
-          />
         </div>
 
         <section className="bg-neutral-700 flex w-full flex-col items-center mt-20 pt-20 pb-24 px-5 max-md:mt-10">
