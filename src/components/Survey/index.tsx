@@ -14,7 +14,7 @@ const SurveyStep = ({ label, options, optionsVariant = 'option', onSelect }: Sur
       <div className="flex flex-col pb-10">
         <h4 className="text-3xl font-semibold text-neutral-600 text-center leading-8 max-w-full">{label}</h4>
       </div>
-      <div className="flex flex-row justify-around flex-wrap px-16 gap-4 lg:gap-2 xl:gap-0">
+      <div className="flex flex-col justify-center content-center flex-wrap px-16 gap-4 xl:gap-0 xl:flex-row xl:justify-around">
         {options.map((option) => (
           <Button key={option} variant={optionsVariant} onClick={() => onSelect(option)}>
             {option}

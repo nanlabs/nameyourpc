@@ -40,20 +40,24 @@ const App = () => {
           </section>
         </div>
 
-        <section className="relative bg-neutral-700 flex w-full flex-col items-center mt-20 pt-20 pb-24 px-5 max-md:mt-10">
+        <section className="relative bg-neutral-700 flex w-full flex-col items-center mt-20 pt-20 pb-24 px-2 sm:px-5 max-md:mt-10">
           <div className="lg:container mx-auto flex flex-col px-4 lg:flex-row justify-between md:px-20 2xl:px-40">
-            <div className="text-white text-xl leading-relaxed grow shrink basis-auto md:max-w-xl">
+            <div className="flex-0 text-white text-xl leading-relaxed grow shrink basis-auto md:max-w-xl">
               <p className="font-bold">Plus, want to stay updated with our tech-tastic world?</p>
               <p>Subscribe to our newsletter for the latest in software development, tech trends, and more.</p>
             </div>
-            <div className="flex flex-row flex-nowrap py-10 lg:py-0">
+            <div className="flex flex-1 flex-row flex-nowrap py-10 lg:py-0 xl:pl-12 2xl:pl-24">
               <input
                 placeholder="Get our news in your inbox!"
-                className="text-neutral-400 text-lg font-thin leading-6 whitespace-nowrap bg-white grow items-center px-8 py-4 rounded-l-full self-start"
+                className="text-neutral-400 font-thin whitespace-nowrap bg-white grow items-center text-sm leading-4 px-4 py-4 sm:text-lg sm:leading-6 sm:px-8 sm:py-4 rounded-l-full self-start"
               />
-              <div className="text-white btn-primary-gradient text-lg font-thin leading-6 whitespace-nowrap bg-white grow items-center px-8 py-4 rounded-r-full self-start">
-                <a href="#">Subscribe</a>
-              </div>
+              <button
+                type="button"
+                className="flex justify-center text-white btn-primary-gradient font-thin whitespace-nowrap bg-white grow items-center text-sm leading-4 px-4 py-4 sm:text-lg sm:leading-6 sm:px-8 sm:py-4  rounded-r-full self-start"
+                onClick={() => alert('subscribe')}
+              >
+                Subscribe
+              </button>
             </div>
           </div>
         </section>

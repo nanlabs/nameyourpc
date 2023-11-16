@@ -1,7 +1,7 @@
 import React from 'react';
 
 const buttonVariants = {
-  base: 'whitespace-nowrap rounded-3xl px-4 py-2 text-sm lg:text-lg lg:px-6 lg:py-2 xl:px-8 xl:py-3',
+  base: 'whitespace-nowrap rounded-3xl px-4 py-2 text-sm lg:text-lg max-w-xs lg:px-6 lg:py-2 xl:px-8 xl:py-3',
   primary: 'btn-primary-gradient text-white',
   option: 'btn-option-gradient text-white',
   secondary: 'bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 text-sm rounded-3xl',
