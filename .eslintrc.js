@@ -22,6 +22,7 @@ module.exports = {
       files: ['**/*.ts', '**/*.tsx'],
       rules: {
         'react/prop-types': 'off',
+        'react/react-in-jsx-scope': 'off',
         'no-restricted-imports': [
           'error',
           {

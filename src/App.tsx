@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import Button from '@/components/Button';
+import Survey from '@/components/Survey';
 
 const App = () => {
   const { t } = useTranslation('translations');
@@ -35,28 +35,7 @@ const App = () => {
             </p>
           </section>
           <section className="bg-white container flex flex-col mt-20 px-20 py-16 rounded-3xl max-w-full max-md:mt-10 max-md:px-5">
-            <div className="flex flex-col pb-10">
-              <h4 className="text-3xl font-semibold text-neutral-600 text-center leading-8 max-w-full">
-                If your PC were a person, what would it look like?
-              </h4>
-            </div>
-            <div className="flex flex-row justify-around flex-wrap px-16 gap-4 lg:gap-2 xl:gap-0">
-              <Button variant="option" onClick={console.log}>
-                Petite and elegant 👛
-              </Button>
-              <Button variant="option" onClick={console.log}>
-                Robust and sturdy 💪
-              </Button>
-              <Button variant="option" onClick={console.log}>
-                Tall and slender 📏
-              </Button>
-            </div>
-
-            <div className="flex flex-row justify-around px-16 mt-10">
-              <Button variant="primary" onClick={console.log}>
-                Let’s name yout PC
-              </Button>
-            </div>
+            <Survey />
           </section>
         </div>
 
