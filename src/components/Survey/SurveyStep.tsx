@@ -35,8 +35,12 @@ export const SurveyStep = ({
         )}
       </div>
       {!!secondaryLabel && (
-        <div className="flex flex-col pt-10 pb-5">
-          <h4 className="text-xl font-thin leading-normal text-center max-w-full">{secondaryLabel}</h4>
+        <div className="flex flex-col pt-5 pb-10">
+          <h4 className="text-xl italic font-thin leading-normal text-center max-w-full text-gray-600">
+            {'"'}
+            {secondaryLabel}
+            {'"'}
+          </h4>
         </div>
       )}
       {!!options.length && (
