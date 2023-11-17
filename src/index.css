@@ -15,6 +15,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.text-result-gradient {
+  background: linear-gradient(90deg, #6f64f5 0%, #ce49cf 74.73%, #f46f66 121.6%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient {
   background: linear-gradient(72.43deg, #2943de 16.09%, #5d73f5 82.08%, #687dfe 108.77%);
 }

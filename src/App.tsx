@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import Survey from '@/components/Survey';
 import landing from './landing.svg';
@@ -38,6 +38,10 @@ const App = () => {
           <section className="bg-white container flex flex-col mt-20 px-20 py-16 rounded-3xl max-w-full max-md:mt-10 max-md:px-5">
             <Survey />
           </section>
+        </div>
+
+        <div className="aspect-ratio object-contain object-center w-195 overflow-hidden self-center max-w-full mt-24 max-md:mt-10">
+          Icons
         </div>
 
         <section className="relative bg-neutral-700 flex w-full flex-col items-center mt-20 pt-20 pb-24 px-2 sm:px-5 max-md:mt-10">
