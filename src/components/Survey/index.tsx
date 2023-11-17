@@ -1,7 +1,19 @@
 import { useState } from 'react';
+import { isMobile } from 'react-device-detect';
+import { LinkedinShareButton } from 'react-share';
 import { SurveyStep } from './SurveyStep';
 import { getResults, steps } from './steps';
 import Button from '../Button';
+
+const url = 'https://nanlabs.github.io/nameyourpc/';
+
+const summary = `💻 Just named my PC with NaNLABS' PC Name Generator – it's a blast! 🚀
+
+🤖 Give it a go and discover your PC's secret identity. Join the fun for #NameYourPCDay and challenge your network to name their PCs. Click the link to get started! 💡
+
+👉 https://nanlabs.github.io/nameyourpc/
+
+Let's spread the PC-naming love! 💬💻 #NaNLABS #TechFun`;
 
 /**
  * Survey is a component that will render a Step component for each step in the steps array.
@@ -29,18 +41,28 @@ const Survey = () => {
   if (!step) {
     const { name, poem } = getResults(questionAnswers) || {};
 
+    if (false) {
+      return (
+        <SurveyStep
+          label={name}
+          secondaryLabel={poem}
+          labelVariant="gradient"
+          options={['Share on LinkedIn']}
+          renderOption={(option) => (
+            <LinkedinShareButton url={url}>
+              <Button variant="primary">{option}</Button>
+            </LinkedinShareButton>
+          )}
+        />
+      );
+    }
+
     const handleLinkedInShare = () => {
-      const url = 'https://nanlabs.github.io/nameyourpc/';
-      const text = `:computer: Just named my PC with NaNLABS' PC Name Generator – it's a blast! :cohete:
-:cara_de_robot: Give it a go and discover your PC's secret identity. Join the fun for #NameYourPCDay and challenge your network to name their PCs. Click the link to get started! :bombilla:
-:apuntando_hacia_la_derecha: https://nanlabs.github.io/nameyourpc/
-Let's spread the PC-naming love! :bocadillo_de_diálogo::ordenador: #NaNLABS #TechFun`;
-
-      // URL de la API de LinkedIn para compartir
-      const linkedinShareURL = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&summary=${text}&source=https://github.com`;
-
-      // Abrir una nueva ventana para compartir en LinkedIn
-      window.open(linkedinShareURL, '_blank');
+      window.open(
+        `https://www.linkedin.com/feed?shareActive=true&text=${encodeURIComponent(summary)}`,
+        'popup',
+        'width=600,height=600',
+      );
     };
 
     return (
