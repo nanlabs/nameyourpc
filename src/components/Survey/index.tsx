@@ -41,7 +41,7 @@ const Survey = () => {
   if (!step) {
     const { name, poem } = getResults(questionAnswers) || {};
 
-    if (false) {
+    if (isMobile) {
       return (
         <SurveyStep
           label={name}
