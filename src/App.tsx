@@ -46,7 +46,7 @@ const App = () => {
           </section>
         </div>
 
-        <div className="self-center max-w-full mt-24 max-md:mt-10">
+        <div className="self-center max-w-full mt-24 max-md:mt-10 z-10">
           <ul className="flex flex-row gap-2">
             <li>
               <a aria-label="github" href="https://github.com/nanlabs" rel="noreferrer noopener" target="_blank">
