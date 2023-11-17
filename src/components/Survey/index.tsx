@@ -58,10 +58,14 @@ const Survey = () => {
     }
 
     const handleLinkedInShare = () => {
+      const w = 600;
+      const h = 600;
+      const y = window.outerHeight / 2 + window.screenY - h / 2;
+      const x = window.outerWidth / 2 + window.screenX - w / 2;
       window.open(
         `https://www.linkedin.com/feed?shareActive=true&text=${encodeURIComponent(summary)}`,
         'popup',
-        'width=600,height=600',
+        `width=${w}, height=${h}, top=${y}, left=${x}, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no`,
       );
     };
 
