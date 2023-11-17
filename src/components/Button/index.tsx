@@ -11,7 +11,7 @@ export type ButtonVariant = keyof typeof buttonVariants;
 
 type ButtonProps = {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   variant?: ButtonVariant;
 };
 

@@ -8,6 +8,7 @@ export type SurveyStepProps = {
   secondaryLabel?: string;
   options?: string[];
   optionsVariant?: ButtonVariant;
+  renderOption?: (option: string) => React.ReactNode;
   onSelect?: (option: string) => void;
 };
 
@@ -17,6 +18,7 @@ export const SurveyStep = ({
   secondaryLabel,
   options = [],
   optionsVariant = 'option',
+  renderOption,
   onSelect,
 }: SurveyStepProps) => {
   return (
@@ -39,11 +41,17 @@ export const SurveyStep = ({
       )}
       {!!options.length && (
         <div className="flex flex-col justify-center content-center flex-wrap px-16 gap-4 xl:gap-0 xl:flex-row xl:justify-around">
-          {options.map((option) => (
-            <Button key={option} variant={optionsVariant} onClick={() => onSelect && onSelect(option)}>
-              {option}
-            </Button>
-          ))}
+          {options.map((option) => {
+            if (renderOption) {
+              return renderOption(option);
+            }
+
+            return (
+              <Button key={option} variant={optionsVariant} onClick={() => onSelect && onSelect(option)}>
+                {option}
+              </Button>
+            );
+          })}
         </div>
       )}
     </>
