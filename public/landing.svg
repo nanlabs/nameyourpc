@@ -1,0 +1,23 @@
+<svg width="1366" height="1366" viewBox="0 0 1366 1366" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2063_96)">
+<rect width="1366" height="1366" fill="url(#paint0_linear_2063_96)"/>
+<rect width="891.576" height="1023.36" rx="32.562" transform="matrix(0.71716 0.696909 -0.698374 0.715733 212.69 -1099)" fill="#8294FF" fill-opacity="0.45"/>
+<rect x="403.841" y="1022" width="190.179" height="189.28" rx="27.862" transform="rotate(45 403.841 1022)" fill="#9C79FF"/>
+<rect x="1147.84" y="-86" width="190.179" height="189.28" rx="27.862" transform="rotate(45 1147.84 -86)" fill="#9C79FF"/>
+<rect width="13.7568" height="23.9118" rx="6.87841" transform="matrix(0.735659 -0.677352 0.679883 0.733321 1170.53 1003.92)" fill="#8294FF"/>
+<rect width="18.8407" height="47.9838" rx="9.42033" transform="matrix(0.697068 -0.717005 0.719403 0.694593 965.426 1021.06)" fill="#FF99FF"/>
+<rect width="18.8407" height="31.4184" rx="9.42033" transform="matrix(0.637297 -0.770618 0.772809 0.634638 364.038 149.132)" fill="#039BE5"/>
+<rect width="18.8407" height="31.4184" rx="9.42033" transform="matrix(0.736809 -0.676101 0.678636 0.734475 142 1067.74)" fill="#039BE5"/>
+<rect x="-15.1588" y="298" width="190.179" height="189.28" rx="27.862" transform="rotate(45 -15.1588 298)" fill="#6271EE"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_2063_96" x1="229.685" y1="1177.48" x2="1785.15" y2="685.058" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2943DE"/>
+<stop offset="0.693533" stop-color="#5D73F5"/>
+<stop offset="0.973958" stop-color="#687DFE"/>
+</linearGradient>
+<clipPath id="clip0_2063_96">
+<rect width="1366" height="1366" fill="white"/>
+</clipPath>
+</defs>
+</svg>
