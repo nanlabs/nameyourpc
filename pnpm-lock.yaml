@@ -11,9 +11,6 @@ dependencies:
   react-dom:
     specifier: ^18.1.0
     version: 18.2.0(react@18.2.0)
-  react-share:
-    specifier: ^4.4.1
-    version: 4.4.1(react@18.2.0)
   web-vitals:
     specifier: ^2.1.4
     version: 2.1.4
@@ -2543,11 +2540,6 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
-  /classnames@2.3.2:
-    resolution:
-      { integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw== }
-    dev: false
-
   /cli-cursor@4.0.0:
     resolution:
       { integrity: sha512-VGtlMu3x/4DOtIUwEkRezxUZ2lBacNJCHash0N0WeZDBS+7Ux1dm3XWAgWYxLJFMMdOeXMHXorshEFhbMSGelg== }
@@ -2667,18 +2659,6 @@ packages:
     resolution:
       { integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA== }
     dev: true
-
-  /debug@2.6.9:
-    resolution:
-      { integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA== }
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-    dependencies:
-      ms: 2.0.0
-    dev: false
 
   /debug@3.2.7:
     resolution:
@@ -4050,15 +4030,6 @@ packages:
       graceful-fs: 4.2.11
     dev: true
 
-  /jsonp@0.2.1:
-    resolution:
-      { integrity: sha512-pfog5gdDxPdV4eP7Kg87M8/bHgshlZ5pybl+yKxAnCZ5O7lCIn7Ixydj03wOlnDQesky2BPyA91SQ+5Y/mNwzw== }
-    dependencies:
-      debug: 2.6.9
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /jsonpointer@5.0.1:
     resolution:
       { integrity: sha512-p/nXbhSEcu3pZRdkW1OfJhpsVtW1gd4Wa1fnQc9YLiTfAjn0312eMKimbdIQzuZl9aa9xUGaRlP9T/CJE/ditQ== }
@@ -4294,11 +4265,6 @@ packages:
     resolution:
       { integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA== }
     dev: true
-
-  /ms@2.0.0:
-    resolution:
-      { integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A== }
-    dev: false
 
   /ms@2.1.2:
     resolution:
@@ -4710,20 +4676,6 @@ packages:
       { integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ== }
     engines: { node: '>=0.10.0' }
     dev: true
-
-  /react-share@4.4.1(react@18.2.0):
-    resolution:
-      { integrity: sha512-AJ9m9RiJssqvYg7MoJUc9J0D7b/liWrsfQ99ndKc5vJ4oVHHd4Fy87jBlKEQPibT40oYA3AQ/a9/oQY6/yaigw== }
-    engines: { node: '>=6.9.0', npm: '>=5.0.0' }
-    peerDependencies:
-      react: ^16.3.0 || ^17 || ^18
-    dependencies:
-      classnames: 2.3.2
-      jsonp: 0.2.1
-      react: 18.2.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /react@18.2.0:
     resolution:
