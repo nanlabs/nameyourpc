@@ -29,7 +29,7 @@ export const SurveyStep = ({
         )}
         {labelVariant === 'text' && <p className="text-xl font-thin leading-normal text-center max-w-full">{label}</p>}
         {labelVariant === 'gradient' && (
-          <h4 className="text-6xl font-semibold text-center leading-8 max-w-full">
+          <h4 className="text-6xl font-semibold text-center leading-15 max-w-full">
             <span className="text-result-gradient">{label}</span>
           </h4>
         )}
