@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <main className="flex flex-col gradient">
-        <div className="absolute top-0 right-0 left-0 bottom-0 z-0 overflow-hidden mix-blend-lighten sm:mix-blend-normal">
+        <div className="absolute top-0 right-0 left-0 bottom-0 z-0 overflow-hidden mix-blend-lighten lg:mix-blend-normal">
           <img loading="lazy" src={landing} className="aspect-ratio object-fill object-center overflow-hidden w-full" />
         </div>
         <div className="relative lg:container mx-auto flex flex-col px-4 md:px-20 2xl:px-40 bg-transparent z-10">
@@ -46,7 +46,7 @@ const App = () => {
           </section>
         </div>
 
-        <div className="self-center max-w-full mt-24 max-md:mt-10">
+        <div className="self-center max-w-full mt-24 max-md:mt-10 z-10">
           <ul className="flex flex-row gap-2">
             <li>
               <a aria-label="github" href="https://github.com/nanlabs" rel="noreferrer noopener" target="_blank">
