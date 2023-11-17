@@ -1,8 +1,17 @@
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import Survey from '@/components/Survey';
 import landing from './landing.svg';
 
+type SubscriptionResult = {
+  message: string;
+  status: 'error' | 'SUBSCRIBED';
+};
+
 const App = () => {
+  const [email, setEmail] = useState('');
+  const [subscribing, setSubscribing] = useState(false);
+  const [subscriptionResult, setSubscriptionResult] = useState<SubscriptionResult | null>(null);
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <main className="flex flex-col gradient">
@@ -47,18 +56,75 @@ const App = () => {
               <p className="font-bold">Plus, want to stay updated with our tech-tastic world?</p>
               <p>Subscribe to our newsletter for the latest in software development, tech trends, and more.</p>
             </div>
-            <div className="flex flex-1 flex-row flex-nowrap py-10 lg:py-0 xl:pl-12 2xl:pl-24">
-              <input
-                placeholder="Get our news in your inbox!"
-                className="text-neutral-400 font-thin whitespace-nowrap bg-white grow items-center text-sm leading-4 px-4 py-4 sm:text-lg sm:leading-6 sm:px-8 sm:py-4 rounded-l-full self-start"
-              />
-              <button
-                type="button"
-                className="flex justify-center text-white btn-primary-gradient font-thin whitespace-nowrap bg-white grow items-center text-sm leading-4 px-4 py-4 sm:text-lg sm:leading-6 sm:px-8 sm:py-4  rounded-r-full self-start"
-                onClick={() => alert('subscribe')}
-              >
-                Subscribe
-              </button>
+            <div className="flex flex-1 flex-col flex-nowrap py-10 lg:py-0 xl:pl-12 2xl:pl-24">
+              {subscriptionResult?.status === 'SUBSCRIBED' ? (
+                <p className="text-white">Great! Keep an 👀 on your inbox.</p>
+              ) : (
+                <>
+                  <div className="flex flex-row">
+                    <input
+                      placeholder="Get our news in your inbox!"
+                      className="text-neutral-600 font-thin whitespace-nowrap bg-white grow items-center text-sm leading-4 px-4 py-4 sm:text-lg sm:leading-6 sm:px-8 sm:py-4 rounded-l-full self-start"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <button
+                      type="button"
+                      className="flex justify-center text-white btn-primary-gradient font-thin whitespace-nowrap bg-white grow items-center text-sm leading-4 px-4 py-4 sm:text-lg sm:leading-6 sm:px-8 sm:py-4  rounded-r-full self-start"
+                      onClick={() => {
+                        setSubscribing(true);
+                        setSubscriptionResult(null);
+                        fetch(
+                          'https://c8rpv7pgxc.execute-api.us-west-2.amazonaws.com/production/newsletter-subscribe',
+                          {
+                            method: 'POST',
+                            body: JSON.stringify({
+                              emailAddress: email,
+                            }),
+                          },
+                        )
+                          .then((res) => res.json())
+                          .then((res) => {
+                            if (res.status === 'SUBSCRIBED') {
+                              setSubscriptionResult({
+                                status: res.status,
+                                message: '',
+                              });
+                              return;
+                            }
+
+                            const errors: Record<string, string> = {
+                              VALIDATION_ERROR: `Email address ${email} is invalid`,
+                              CONFLICT: 'Email already in use, try a new one',
+                            };
+
+                            setSubscriptionResult({
+                              status: res.status,
+                              message: errors[res.category] || 'Oops, something went wrong. Try again later.',
+                            });
+                          })
+                          .catch(() => {
+                            setSubscriptionResult({
+                              status: 'error',
+                              message: 'Oops, something went wrong. Try again later.',
+                            });
+                          })
+                          .finally(() => {
+                            setSubscribing(false);
+                          });
+                      }}
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                  {subscribing ? (
+                    <p className="text-gray-300 p-2 pl-5">Subscribing...</p>
+                  ) : (
+                    subscriptionResult?.status === 'error' && (
+                      <p className="text-gray-300 p-2 pl-5">{subscriptionResult.message}</p>
+                    )
+                  )}
+                </>
+              )}
             </div>
           </div>
         </section>
