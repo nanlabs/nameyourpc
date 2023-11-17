@@ -44,7 +44,7 @@ export const SurveyStep = ({
         </div>
       )}
       {!!options.length && (
-        <div className="flex flex-col justify-center content-center flex-wrap px-16 gap-4 xl:gap-0 xl:flex-row xl:justify-around">
+        <div className="flex flex-col justify-center content-center flex-wrap px-4 gap-4 xl:gap-y-5 xl:flex-row xl:justify-around">
           {options.map((option) => {
             if (renderOption) {
               return renderOption(option);
