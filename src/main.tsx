@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 
 import './index.css';
 
-import '@/i18n';
 import reportWebVitals from '@/report-web-vitals';
 import App from '@/App';
 
